@@ -49,12 +49,12 @@ This package comes with a command-line interface that can be used either by inst
 
 ```json
 {
-    "devDependencies": {
-        "promises-aplus-tests": "*"
-    },
-    "scripts": {
-        "test": "run-my-own-tests && promises-aplus-tests test/my-adapter"
-    }
+  "devDependencies": {
+    "promises-aplus-tests": "*"
+  },
+  "scripts": {
+    "test": "run-my-own-tests && promises-aplus-tests test/my-adapter"
+  }
 }
 ```
 
@@ -66,11 +66,11 @@ tries to pass through any subsequent options to Mocha, so you can use e.g. `--re
 The main export of this package is a function that allows you to run the tests against an adapter:
 
 ```js
-var promisesAplusTests = require("promises-aplus-tests");
+var promisesAplusTests = require("promises-aplus-tests")
 
 promisesAplusTests(adapter, function (err) {
-    // All done; output is in the console. Or check `err` for number of failures.
-});
+  // All done; output is in the console. Or check `err` for number of failures.
+})
 ```
 
 You can also pass any Mocha options as the second parameter, e.g.
@@ -78,7 +78,7 @@ You can also pass any Mocha options as the second parameter, e.g.
 ```js
 promisesAplusTests(adapter, { reporter: "dot" }, function (err) {
   // As before.
-});
+})
 ```
 
 ### Within an Existing Mocha Test Suite
@@ -87,8 +87,8 @@ If you already have a Mocha test suite and want to include these tests in it, yo
 
 ```js
 describe("Promises/A+ Tests", function () {
-    require("promises-aplus-tests").mocha(adapter);
-});
+  require("promises-aplus-tests").mocha(adapter)
+})
 ```
 
 This also works in the browser, if you have your Mocha tests running there, as long as you use [browserify](http://browserify.org/).
