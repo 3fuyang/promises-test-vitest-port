@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "types": ["node"]
+  },
+  "exclude": ["node_modules"]
+}

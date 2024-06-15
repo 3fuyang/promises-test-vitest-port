@@ -1,26 +1,31 @@
-"use strict";
-var fs = require("fs");
-var path = require("path");
+import fs from 'node:fs'
+import path from 'node:path'
+import url from 'node:url'
 
-var testsDir = path.resolve(__dirname, "../lib/tests");
-var testDirFiles = fs.readdirSync(testsDir);
+const __dirname = path.dirname(url.fileURLToPath(import.meta.url))
 
-var outFile = fs.createWriteStream(path.resolve(__dirname, "../lib/testFiles.js"), { encoding: "utf-8" });
+const testsDir = path.resolve(__dirname, '../lib/tests')
+const testDirFiles = fs.readdirSync(testsDir)
 
-outFile.write("\"use strict\";\n");
+const outFileWritableStream = fs.createWriteStream(
+  path.resolve(__dirname, '../lib/testFiles.js'),
+  { encoding: 'utf-8' }
+)
 
-testDirFiles.forEach(function (file) {
-    if (path.extname(file) !== ".js") {
-        return;
-    }
+// outFile.write('"use strict";\n')
 
-    outFile.write("require(\"./");
-    outFile.write("tests/" + path.basename(file, ".js"));
-    outFile.write("\");\n");
-});
+testDirFiles.forEach((file) => {
+  if (path.extname(file) !== '.js') {
+    return
+  }
 
-outFile.end(function (err) {
-    if (err) {
-        throw err;
-    }
-});
+  outFileWritableStream.write('await import("./')
+  outFileWritableStream.write('tests/' + path.basename(file))
+  outFileWritableStream.write('");\n')
+})
+
+outFileWritableStream.end((err) => {
+  if (err) {
+    throw err
+  }
+})
