@@ -24,7 +24,6 @@
     "prepublish": "node ./scripts/generateTestFiles.js"
   },
   "dependencies": {
-    "mocha": "^10.4.0",
     "sinon": "^18.0.0",
     "underscore": "~1.13.6"
   },
@@ -35,6 +34,7 @@
     "eslint-config-prettier": "^9.1.0",
     "globals": "^15.4.0",
     "prettier": "3.3.2",
+    "vite": "^5.3.1",
     "vitest": "^1.6.0"
   },
   "browser": {
