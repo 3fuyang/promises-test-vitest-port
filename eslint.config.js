@@ -6,4 +6,10 @@ export default [
   { languageOptions: { globals: globals.browser } },
   pluginJs.configs.recommended,
   eslintConfigPrettier,
+  {
+    rules: {
+      "prefer-arrow-callback": "error",
+      "object-shorthand": "error",
+    },
+  },
 ]
