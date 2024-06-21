@@ -1,7 +1,7 @@
 {
   "name": "promises-aplus-tests",
   "type": "module",
-  "description": "Compliance test suite for Promises/A+",
+  "description": "Compliance test suite for Promises/A+, but the Vitest port",
   "keywords": [
     "promises",
     "promises-aplus"
@@ -10,10 +10,9 @@
   "implements": [
     "Promises/A+ 1.1.0"
   ],
-  "author": "Domenic Denicola <d@domenic.me> (https://domenic.me)",
+  "author": "Fwio <fwiofu3193@gmail.come> (https://3fuyang.github.io)",
   "license": "WTFPL",
-  "repository": "promises-aplus/promises-tests",
-  "main": "lib/programmaticRunner.js",
+  "repository": "3fuyang/promises-tests",
   "bin": "lib/cli.js",
   "files": [
     "lib/"
@@ -29,10 +28,13 @@
   "devDependencies": {
     "@eslint/js": "^9.5.0",
     "@types/node": "^20.14.2",
+    "@vitest/ui": "^1.6.0",
     "eslint": "9.x",
     "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-jsdoc": "^48.2.12",
     "globals": "^15.4.0",
     "prettier": "3.3.2",
+    "typescript": "^5.4.5",
     "vite": "^5.3.1",
     "vitest": "^1.6.0"
   }
