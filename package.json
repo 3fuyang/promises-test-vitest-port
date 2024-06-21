@@ -11,7 +11,7 @@
   "implements": [
     "Promises/A+ 1.1.0"
   ],
-  "author": "Fwio <fwiofu3193@gmail.come> (https://3fuyang.github.io)",
+  "author": "Fwio <fwiofu3193@gmail.com> (https://3fuyang.github.io)",
   "license": "WTFPL",
   "repository": "3fuyang/promises-tests-vitest-port",
   "bin": "lib/cli.js",
