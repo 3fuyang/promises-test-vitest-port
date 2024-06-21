@@ -1,29 +1,27 @@
 {
-  "name": "promises-aplus-tests",
+  "name": "promises-aplus-tests-vitest-port",
   "type": "module",
   "description": "Compliance test suite for Promises/A+, but the Vitest port",
   "keywords": [
     "promises",
-    "promises-aplus"
+    "promises-aplus",
+    "vitest"
   ],
-  "version": "2.1.2",
+  "version": "0.1.0",
   "implements": [
     "Promises/A+ 1.1.0"
   ],
   "author": "Fwio <fwiofu3193@gmail.come> (https://3fuyang.github.io)",
   "license": "WTFPL",
-  "repository": "3fuyang/promises-tests",
+  "repository": "3fuyang/promises-tests-vitest-port",
   "bin": "lib/cli.js",
   "files": [
     "lib/"
   ],
   "scripts": {
     "lint": "eslint --fix && prettier --write .",
-    "test": "vitest"
-  },
-  "dependencies": {
-    "sinon": "^18.0.0",
-    "underscore": "~1.13.6"
+    "test": "vitest",
+    "test:ui": "vitest --ui"
   },
   "devDependencies": {
     "@eslint/js": "^9.5.0",
@@ -34,7 +32,6 @@
     "eslint-plugin-jsdoc": "^48.2.12",
     "globals": "^15.4.0",
     "prettier": "3.3.2",
-    "typescript": "^5.4.5",
     "vite": "^5.3.1",
     "vitest": "^1.6.0"
   }
